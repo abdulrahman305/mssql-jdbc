@@ -61,6 +61,29 @@ To build the jar files, you must use minimum version of Java 11 with Maven. You 
         * Run `gradle build -PbuildProfile=jre11`. This creates JRE 11 compatible jar in `\build\libs` directory which is JDBC 4.3 compliant (Build with JDK 11+).
         * Run `gradle build -PbuildProfile=jre8`. This creates JRE 8 compatible jar in `\build\libs` directory which is JDBC 4.2 compliant (Build with JDK 11+).
 
+### Syncing with Upstream Repository
+To keep your forked repository up-to-date with the upstream repository, follow these steps:
+
+1. Add the upstream repository as a remote:
+   ```
+   git remote add upstream https://github.com/microsoft/mssql-jdbc.git
+   ```
+
+2. Fetch the latest changes from the upstream repository:
+   ```
+   git fetch upstream
+   ```
+
+3. Merge the changes into your local branch:
+   ```
+   git merge upstream/main
+   ```
+
+4. Push the changes to your forked repository:
+   ```
+   git push origin main
+   ```
+
 ## Resources
 
 ### Documentation
